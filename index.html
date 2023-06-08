@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!--====== Title ======-->
+    <title>Questionnaire-funnel</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="assets/css/LineIcons.css">
+
+    <!--====== Font Awesome CSS ======-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        #video-frame {
+            border: none !important;
+            border-radius: 12px;
+            box-shadow: 0 0 0 8px #5eb725;
+        }
+
+        .header-hero {
+            height: 470px;
+        }
+
+
+        .answer {
+            color: #4F4F4F;
+            background-color: #f0f0f0;
+            width: 400px;
+            margin-top: 20px !important;
+
+
+        }
+
+
+        .answer:hover {
+            background-color: #1b74e4;
+            color: white;
+        }
+
+
+        .profile-card {
+            border-radius: 10px;
+            background: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.56);
+            box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+        }
+
+        .stats {
+            background: #f2f5f8 !important;
+            gap: 2rem;
+            color: #000 !important;
+        }
+
+        .articles {
+            font-size: 10px;
+            color: #a1aab9;
+        }
+
+        .number1 {
+            font-weight: 500;
+        }
+
+        .followers {
+            font-size: 10px;
+            color: #a1aab9;
+        }
+
+        .number2 {
+            font-weight: 500;
+        }
+
+        .rating {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .number3 {
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        .p-30 {
+            padding: 30px;
+        }
+
+        .gap-2 {
+            gap: 2rem;
+        }
+
+
+        .congrat {
+            background: linear-gradient(90.22deg, #0083DE 0.14%, #C9124F 52.73%, #6C33B5 99.76%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .chat-action,
+        .btn-continue {
+            background-color: #EA9C00;
+            border-radius: 0px 12px 12px 0px;
+        }
+
+        .btn-continue {
+            margin-top: 80px;
+        }
+
+        .gradient {
+            background: linear-gradient(90.22deg, #0083DE 0.14%, #C9124F 52.73%, #6C33B5 99.76%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .chat-input,
+        .chat-input input {
+            height: 72px;
+        }
+
+        .chat-input {
+            border-radius: 1rem;
+            max-width: 730px;
+        }
+
+        .my-48 {
+            margin-top: 48px;
+            margin-bottom: 48px;
+        }
+
+        #chat-input-elem {
+            background: #F0F0F0;
+            border-radius: 16px 0px 0px 16px;
+            font-size: 20px;
+        }
+
+        #chat-mobile,
+        #chat {
+            font-size: 20px;
+        }
+
+        .profile-card-image {
+            width: 100%;
+        }
+
+        .max-w-80 {
+            max-width: 80%;
+        }
+
+        .question-title {
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 56px;
+
+            letter-spacing: -0.02em;
+
+            color: #000000;
+        }
+
+        .right-section {
+            flex-basis: 50%;
+        }
+
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 90%;
+            margin: auto;
+            margin-top: 1rem;
+        }
+
+        .text-footer {
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration: underline;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .questionnaire-section {
+            margin-top: -10%;
+        }
+
+        .profile-card {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            z-index: 8;
+        }
+
+
+        .right-section {
+            margin-left: 30%;
+            z-index: 222;
+            position: relative;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            #chat-input-elem {
+                font-size: 20px;
+            }
+
+            .header-hero {
+                height: 200px;
+            }
+
+            .profile-card-image {
+                width: 117px;
+                height: auto;
+            }
+
+            .answer {
+                width: 90vw;
+                margin: auto;
+            }
+
+            .max-w-80 {
+                min-width: 90vw;
+            }
+
+            .profile-card {
+                display: flex;
+                gap: 20px;
+                left: auto;
+                right: auto;
+            }
+
+            .profile-card h4 {
+                font-size: 16px;
+                color: #614E9A;
+            }
+
+            .profile-card .occupation,
+            .profile-card .rating {
+                font-size: 14px;
+            }
+
+            .question-title {
+                font-size: 24px;
+                line-height: 36px;
+                letter-spacing: -0.02em;
+            }
+
+            .profile-card {
+                top: 7%;
+            }
+
+            .right-section {
+                margin-top: 20vh;
+                margin-left: unset;
+
+            }
+
+            footer {
+                position: relative !important;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-direction: column;
+                padding-bottom: 20px;
+            }
+        }
+
+        .text-field {
+            opacity: 0;
+        }
+
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== HEADER PART START ======-->
+
+    <header class="header-area">
+
+        <div id="home" class="header-hero bg_cover"
+            style="background-image: url(assets/images/questionnaire-header-bg.svg)">
+            <div id="particles-1" class="particles"></div>
+        </div> <!-- header hero -->
+    </header>
+
+
+    <!-- ====Profile Card Starts Here -->
+    <section class="row flex-lg-nowrap justify-content-around gap-2 max-w-80 mx-auto questionnaire-section">
+        <div class="profile-card p-30">
+            <img src="assets/images/belinda.svg" class="rounded-lg profile-card-image" />
+
+            <div>
+                <h4 class="my-2 mt-3">Belinda Lehmann <span><svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7.5" cy="7.5" r="7.5" fill="#5EB725" />
+                        </svg>
+                    </span></h4>
+                <span class="occupation">Yolo Mentor</span>
+                <div class="mt-2">
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.54894 0.927051C8.8483 0.00574017 10.1517 0.00573993 10.4511 0.927051L11.8574 5.25532C11.9913 5.66734 12.3752 5.9463 12.8085 5.9463H17.3595C18.3282 5.9463 18.731 7.18592 17.9473 7.75532L14.2654 10.4303C13.9149 10.685 13.7683 11.1364 13.9021 11.5484L15.3085 15.8766C15.6078 16.798 14.5533 17.5641 13.7696 16.9947L10.0878 14.3197C9.7373 14.065 9.2627 14.065 8.91221 14.3197L5.23037 16.9947C4.44665 17.5641 3.39217 16.798 3.69153 15.8766L5.09787 11.5484C5.23174 11.1364 5.08508 10.685 4.7346 10.4303L1.05275 7.75532C0.269035 7.18592 0.67181 5.9463 1.64053 5.9463H6.19155C6.62477 5.9463 7.00873 5.66734 7.1426 5.25532L8.54894 0.927051Z"
+                            fill="#F4A80F" />
+                    </svg>
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.54894 0.927051C8.8483 0.00574017 10.1517 0.00573993 10.4511 0.927051L11.8574 5.25532C11.9913 5.66734 12.3752 5.9463 12.8085 5.9463H17.3595C18.3282 5.9463 18.731 7.18592 17.9473 7.75532L14.2654 10.4303C13.9149 10.685 13.7683 11.1364 13.9021 11.5484L15.3085 15.8766C15.6078 16.798 14.5533 17.5641 13.7696 16.9947L10.0878 14.3197C9.7373 14.065 9.2627 14.065 8.91221 14.3197L5.23037 16.9947C4.44665 17.5641 3.39217 16.798 3.69153 15.8766L5.09787 11.5484C5.23174 11.1364 5.08508 10.685 4.7346 10.4303L1.05275 7.75532C0.269035 7.18592 0.67181 5.9463 1.64053 5.9463H6.19155C6.62477 5.9463 7.00873 5.66734 7.1426 5.25532L8.54894 0.927051Z"
+                            fill="#F4A80F" />
+                    </svg>
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.54894 0.927051C8.8483 0.00574017 10.1517 0.00573993 10.4511 0.927051L11.8574 5.25532C11.9913 5.66734 12.3752 5.9463 12.8085 5.9463H17.3595C18.3282 5.9463 18.731 7.18592 17.9473 7.75532L14.2654 10.4303C13.9149 10.685 13.7683 11.1364 13.9021 11.5484L15.3085 15.8766C15.6078 16.798 14.5533 17.5641 13.7696 16.9947L10.0878 14.3197C9.7373 14.065 9.2627 14.065 8.91221 14.3197L5.23037 16.9947C4.44665 17.5641 3.39217 16.798 3.69153 15.8766L5.09787 11.5484C5.23174 11.1364 5.08508 10.685 4.7346 10.4303L1.05275 7.75532C0.269035 7.18592 0.67181 5.9463 1.64053 5.9463H6.19155C6.62477 5.9463 7.00873 5.66734 7.1426 5.25532L8.54894 0.927051Z"
+                            fill="#F4A80F" />
+                    </svg>
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.54894 0.927051C8.8483 0.00574017 10.1517 0.00573993 10.4511 0.927051L11.8574 5.25532C11.9913 5.66734 12.3752 5.9463 12.8085 5.9463H17.3595C18.3282 5.9463 18.731 7.18592 17.9473 7.75532L14.2654 10.4303C13.9149 10.685 13.7683 11.1364 13.9021 11.5484L15.3085 15.8766C15.6078 16.798 14.5533 17.5641 13.7696 16.9947L10.0878 14.3197C9.7373 14.065 9.2627 14.065 8.91221 14.3197L5.23037 16.9947C4.44665 17.5641 3.39217 16.798 3.69153 15.8766L5.09787 11.5484C5.23174 11.1364 5.08508 10.685 4.7346 10.4303L1.05275 7.75532C0.269035 7.18592 0.67181 5.9463 1.64053 5.9463H6.19155C6.62477 5.9463 7.00873 5.66734 7.1426 5.25532L8.54894 0.927051Z"
+                            fill="#F4A80F" />
+                    </svg>
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.54894 0.927051C8.8483 0.00574017 10.1517 0.00573993 10.4511 0.927051L11.8574 5.25532C11.9913 5.66734 12.3752 5.9463 12.8085 5.9463H17.3595C18.3282 5.9463 18.731 7.18592 17.9473 7.75532L14.2654 10.4303C13.9149 10.685 13.7683 11.1364 13.9021 11.5484L15.3085 15.8766C15.6078 16.798 14.5533 17.5641 13.7696 16.9947L10.0878 14.3197C9.7373 14.065 9.2627 14.065 8.91221 14.3197L5.23037 16.9947C4.44665 17.5641 3.39217 16.798 3.69153 15.8766L5.09787 11.5484C5.23174 11.1364 5.08508 10.685 4.7346 10.4303L1.05275 7.75532C0.269035 7.18592 0.67181 5.9463 1.64053 5.9463H6.19155C6.62477 5.9463 7.00873 5.66734 7.1426 5.25532L8.54894 0.927051Z"
+                            fill="#F4A80F" />
+                    </svg>
+                </div>
+                <span class="rating d-lg-none">Certified <span><svg width="26" height="26" viewBox="0 0 26 26"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.4423 5.65471C12.5088 4.98083 13.4912 4.98083 13.5577 5.65471C13.6148 6.23355 14.407 6.35295 14.6321 5.81665C14.8943 5.1923 15.8331 5.4819 15.698 6.14543C15.5819 6.71538 16.3037 7.06297 16.677 6.61687C17.1115 6.09752 17.9232 6.65098 17.5985 7.2452C17.3196 7.75562 17.9069 8.30052 18.3951 7.98425C18.9634 7.61606 19.5759 8.3842 19.0905 8.85632C18.6735 9.26186 19.0741 9.95564 19.6338 9.79731C20.2854 9.61298 20.6443 10.5276 20.0413 10.8356C19.5233 11.1002 19.7016 11.8813 20.2831 11.8949C20.96 11.9109 21.0335 12.8906 20.3664 13.0072C19.7935 13.1074 19.7336 13.9063 20.2852 14.0908C20.9274 14.3055 20.7088 15.2634 20.037 15.1782C19.46 15.1051 19.1673 15.8508 19.6401 16.1897C20.1904 16.5842 19.6992 17.435 19.0824 17.1556C18.5525 16.9157 18.053 17.542 18.4049 18.0051C18.8145 18.5443 18.0943 19.2126 17.5872 18.7638C17.1517 18.3783 16.4898 18.8296 16.6895 19.3759C16.922 20.0119 16.0368 20.4382 15.6845 19.8599C15.3819 19.3631 14.6164 19.5992 14.6462 20.1801C14.681 20.8564 13.7094 21.0028 13.5433 20.3464C13.4006 19.7825 12.5994 19.7825 12.4567 20.3464C12.2906 21.0028 11.319 20.8564 11.3538 20.1801C11.3836 19.5992 10.6181 19.3631 10.3155 19.8599C9.96321 20.4382 9.07802 20.0119 9.31052 19.3759C9.51023 18.8296 8.84832 18.3783 8.41276 18.7638C7.90569 19.2126 7.18547 18.5443 7.5951 18.0051C7.94697 17.542 7.44748 16.9157 6.91764 17.1556C6.30082 17.435 5.80957 16.5842 6.35994 16.1897C6.83268 15.8508 6.54 15.1051 5.96297 15.1782C5.2912 15.2634 5.07258 14.3055 5.71477 14.0908C6.26639 13.9063 6.20653 13.1074 5.63357 13.0072C4.96654 12.8906 5.03997 11.9109 5.71693 11.8949C6.29842 11.8813 6.47668 11.1002 5.95871 10.8356C5.35569 10.5276 5.71464 9.61298 6.36621 9.79731C6.9259 9.95564 7.32646 9.26186 6.90949 8.85632C6.42407 8.3842 7.03665 7.61606 7.60495 7.98425C8.0931 8.30052 8.68035 7.75562 8.40145 7.2452C8.07676 6.65098 8.88853 6.09752 9.32305 6.61687C9.69629 7.06297 10.4181 6.71538 10.302 6.14543C10.1669 5.4819 11.1057 5.1923 11.3679 5.81665C11.593 6.35295 12.3852 6.23355 12.4423 5.65471Z"
+                                fill="#0083DE" />
+                            <path d="M9.45453 13.0369L11.6126 15.3636L16.5454 10.0455" stroke="white" />
+                        </svg>
+                    </span></span>
+                <div class="p-3 mt-3 bg-primary d-lg-flex align-items-center rounded text-white stats d-none ">
+                    <dir>
+                        <img src="assets/images/ULTANIO_Logomark_Fullcolor_Transparent 2.svg" alt="logomark" />
+                    </dir>
+
+                    <div class="d-flex flex-column">
+                        <span class="rating">Certified <span><svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.4423 5.65471C12.5088 4.98083 13.4912 4.98083 13.5577 5.65471C13.6148 6.23355 14.407 6.35295 14.6321 5.81665C14.8943 5.1923 15.8331 5.4819 15.698 6.14543C15.5819 6.71538 16.3037 7.06297 16.677 6.61687C17.1115 6.09752 17.9232 6.65098 17.5985 7.2452C17.3196 7.75562 17.9069 8.30052 18.3951 7.98425C18.9634 7.61606 19.5759 8.3842 19.0905 8.85632C18.6735 9.26186 19.0741 9.95564 19.6338 9.79731C20.2854 9.61298 20.6443 10.5276 20.0413 10.8356C19.5233 11.1002 19.7016 11.8813 20.2831 11.8949C20.96 11.9109 21.0335 12.8906 20.3664 13.0072C19.7935 13.1074 19.7336 13.9063 20.2852 14.0908C20.9274 14.3055 20.7088 15.2634 20.037 15.1782C19.46 15.1051 19.1673 15.8508 19.6401 16.1897C20.1904 16.5842 19.6992 17.435 19.0824 17.1556C18.5525 16.9157 18.053 17.542 18.4049 18.0051C18.8145 18.5443 18.0943 19.2126 17.5872 18.7638C17.1517 18.3783 16.4898 18.8296 16.6895 19.3759C16.922 20.0119 16.0368 20.4382 15.6845 19.8599C15.3819 19.3631 14.6164 19.5992 14.6462 20.1801C14.681 20.8564 13.7094 21.0028 13.5433 20.3464C13.4006 19.7825 12.5994 19.7825 12.4567 20.3464C12.2906 21.0028 11.319 20.8564 11.3538 20.1801C11.3836 19.5992 10.6181 19.3631 10.3155 19.8599C9.96321 20.4382 9.07802 20.0119 9.31052 19.3759C9.51023 18.8296 8.84832 18.3783 8.41276 18.7638C7.90569 19.2126 7.18547 18.5443 7.5951 18.0051C7.94697 17.542 7.44748 16.9157 6.91764 17.1556C6.30082 17.435 5.80957 16.5842 6.35994 16.1897C6.83268 15.8508 6.54 15.1051 5.96297 15.1782C5.2912 15.2634 5.07258 14.3055 5.71477 14.0908C6.26639 13.9063 6.20653 13.1074 5.63357 13.0072C4.96654 12.8906 5.03997 11.9109 5.71693 11.8949C6.29842 11.8813 6.47668 11.1002 5.95871 10.8356C5.35569 10.5276 5.71464 9.61298 6.36621 9.79731C6.9259 9.95564 7.32646 9.26186 6.90949 8.85632C6.42407 8.3842 7.03665 7.61606 7.60495 7.98425C8.0931 8.30052 8.68035 7.75562 8.40145 7.2452C8.07676 6.65098 8.88853 6.09752 9.32305 6.61687C9.69629 7.06297 10.4181 6.71538 10.302 6.14543C10.1669 5.4819 11.1057 5.1923 11.3679 5.81665C11.593 6.35295 12.3852 6.23355 12.4423 5.65471Z"
+                                        fill="#0083DE" />
+                                    <path d="M9.45453 13.0369L11.6126 15.3636L16.5454 10.0455" stroke="white" />
+                                </svg>
+                            </span></span>
+                        <span class="number3">Super Star</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-grow-1 right-section">
+            <div id="question-0">
+                <h2 class="question-title">Do you want to become the best?</h2>
+
+                <div class="mt-4">
+                    <button type="button" class="btn btn-block answer p-3 text-left">👍🏻 Yes</button>
+                    <button type="button" class="btn btn-block answer p-3 text-left">😌 No</button>
+                </div>
+            </div>
+
+            <div id="question-1">
+                <h2 class="question-title">Do you want help for your
+                    big goals?</h2>
+
+                <div class="mt-4">
+                    <button type="button" class="btn btn-block answer p-3 text-left">🚀 Yes</button>
+                    <button type="button" class="btn btn-block answer p-3 text-left">😌 No</button>
+                </div>
+            </div>
+
+            <div id="question-2">
+                <h2 class="question-title">Where do you want help?</h2>
+
+                <div class="mt-4">
+                    <button type="button" class="btn btn-block answer p-3 text-left">☕️ Career Catalyst</button>
+                    <button type="button" class="btn btn-block answer p-3 text-left">🚀 Self-boost</button>
+                    <button type="button" class="btn btn-block answer p-3 text-left">🏃🏻‍♂️ Creativity Kick</button>
+                    <button type="button" class="btn btn-block answer p-3 text-left">💥 Efficiency Explosion</button>
+                </div>
+            </div>
+
+            <div id="question-3">
+                <h2 class="question-title">AI Mentors can lead to great success. Are you ready for this?
+                </h2>
+
+                <div class="mt-4">
+                    <button type="button" class="btn btn-block answer p-3 text-left">😎 Yes</button>
+                    <button type="button" class="btn btn-block answer p-3 text-left">😔 No</button>
+                </div>
+            </div>
+            <div class="d-none" id="congratulate-block">
+                <h2 class="question-title">
+                    <span class="congrat">Congratulations!</span> <br />
+                    You can now chat with your AI Mentor
+                </h2>
+                <button class="btn btn-continue text-white mt-10 p-4" onclick="showChatBlock()">
+                    Continue
+                    <svg class="ml-2" width="25" height="18" viewBox="0 0 25 18" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 9H23.5M23.5 9L16 1.5M23.5 9L16 16.5" stroke="white" stroke-width="2" />
+                    </svg>
+                </button>
+            </div>
+            <div class="d-none" id="chat-block">
+                <h2 class="question-title" id="chat-title">
+
+                </h2>
+                <div class="input-group chat-input my-48 d-none d-md-flex text-field">
+                    <input type="text" id="chat-input-elem" class="form-control" aria-label="chat"
+                        aria-describedby="chat">
+                    <div class="input-group-append">
+                        <span class="input-group-text text-white chat-action" id="chat">
+                            Free Chat
+                            <svg class="ml-2" width="25" height="18" viewBox="0 0 25 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 9H23.5M23.5 9L16 1.5M23.5 9L16 16.5" stroke="white" stroke-width="2" />
+                            </svg></span>
+                    </div>
+                </div>
+                <div class="d-block d-md-none my-48 text-field">
+                    <input type="text" id="chat-input-elem-mobile" class="form-control rounded-lg">
+                    <button class="btn btn-block rounded-lg text-white chat-action mt-4" id="chat-mobile">
+                        Free Chat
+                        <svg class="ml-2" width="25" height="18" viewBox="0 0 25 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 9H23.5M23.5 9L16 1.5M23.5 9L16 16.5" stroke="white" stroke-width="2" />
+                        </svg>
+                    </button>
+                </div>
+                <p class="text-center text-md-left"><span class="gradient">Temporary Offer</span>. Available for 0:00.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- ===Footer Starts Here  -->
+    <footer class="text-center">
+        <img src="assets/images/footer-logo.svg" alt="footer-logo">
+        <div>
+
+            <p> <a href="terms.html" class="text-footer">Terms of Service</a> | <a href="dmca.html"
+                    class="text-footer">DMCA</a> | <a href="support.html" class="text-footer">Support</a></p>
+        </div>
+    </footer>
+    <!-- ====footer Ends Here -->
+
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
+    <!--====== PART START ======-->
+
+    <!--
+    <section class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-"></div>
+            </div>
+        </div>
+    </section>
+-->
+
+    <!--====== PART ENDS ======-->
+
+
+
+    <!--====== Jquery js ======-->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!--====== Plugins js ======-->
+    <script src="assets/js/plugins.js"></script>
+
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+
+    <!--====== Ajax Contact js ======-->
+    <script src="assets/js/ajax-contact.js"></script>
+
+    <!--====== Counter Up js ======-->
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!--====== Scrolling Nav js ======-->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+
+    <!--====== wow js ======-->
+    <script src="assets/js/wow.min.js"></script>
+
+    <!--====== Particles js ======-->
+    <script src="assets/js/particles.min.js"></script>
+
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+
+    <!--====== custom script js ======-->
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
